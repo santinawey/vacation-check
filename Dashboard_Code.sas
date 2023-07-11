@@ -7,19 +7,19 @@ cas mysession sessopts=(caslib=casuser timeout=1800 locale="en_US");
 /* Create librefs for */
 libname public cas caslib=public;
 CASLIB _ALL_ ASSIGN;
-libname dc "/mnt/nfs/data/Dashboard Challenge/Tables";
+libname dc "data/Dashboard Challenge/Tables";
 
 /**********************************
 Import Data Sets
  **********************************/
 /* Import Weather Data Set with ISO_Codes*/
-PROC IMPORT DATAFILE='/mnt/nfs/data/Dashboard Challenge/Data/weather_iso.xlsx' 
+PROC IMPORT DATAFILE='data/Dashboard Challenge/Data/weather_iso.xlsx' 
 		DBMS=XLSX OUT=dc.weather_iso;
 	GETNAMES=YES;
 RUN;
 
 /* Import Weather Data Set with ISO_Codes*/
-PROC IMPORT DATAFILE='/mnt/nfs/data/Dashboard Challenge/Data/rainfall.xlsx' 
+PROC IMPORT DATAFILE='data/Dashboard Challenge/Data/rainfall.xlsx' 
 		DBMS=XLSX OUT=dc.rainfall;
 	GETNAMES=YES;
 RUN;

@@ -212,20 +212,6 @@ proc sql;
     on t1.ISO2 = t2.ISO2;
  quit;
  
-/* TO DO
-Check Temperature per Country
-PROC MEANS DATA=dc.weather_data_no_extrems;
-VAR tmax tmin;
-CLASS name;
-TYPES name;
-OUTPUT OUT=temperature_summary
-MIN=MinTemp
-MAX=MaxTemp;
-RUN;
-
-PROC PRINT DATA=temperature_summary;
-VAR country MinTemp MaxTemp;
-RUN;*/
 /*Upload data from work library to CAS*/
 proc casutil;
 	load data=dc.weather_iso_rainfall outcaslib="public" 

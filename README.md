@@ -20,7 +20,7 @@ To run this project, you need to have the following software and resources insta
 ```sas
 /* Set library references */
 libname public cas caslib=public;
-libname dc "/mnt/nfs/data/Dashboard Challenge/Tables";
+libname dc "data/Dashboard Challenge/Tables";
 ```
 
 4. Run each section of the code in sequence to import, clean, and integrate the datasets.
